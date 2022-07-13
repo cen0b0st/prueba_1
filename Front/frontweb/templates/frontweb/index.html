@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TEST Oirtak Administracion...</title>
+    <link rel="preload" href="{% static 'frontweb/css/style.css' %}" as="style">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'frontweb/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'frontweb/css/style.css' %}">
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="titulo">
+            <h1>Formulario de Solicitud o Reclamos</h1>
+        </div>
+        <!--FORMULARIO-->
+        <form class="form">
+            <!--ESPACIO FOLIO Y FECHA-->
+            <div class="form_1">
+                <h2 class="formulario--label__1">FOLIO N°: </h2>
+                <input class="formulario--input__1" type="text" placeholder="{{fecha}}" onfocus="(this.type='date')"
+                    disabled>
+
+                <h2 class="formulario--label__2">FECHA:</h2>
+                <input class="formulario--input__2" type="text" placeholder="{{fecha}}" onfocus="(this.type='date')"
+                    disabled>
+            </div>
+
+            <!--ESPACIO TIPO ANEXO EMAIL Y CARGO-->
+            <div class="form_2">
+                <h2 class="formulario--label__3">Tipo de Formulario:</h2>
+                <select required class="formulario--input__3">
+                    <option disabled-selected>SELECCIONE TIPO</option>
+                </select>
+                <h2 class="formulario--label__4">ANEXO:</h2>
+                <input class="formulario--input__4" type="text" placeholder="ANEXO">
+
+                <h2 class="formulario--label__5">EMAIL (INSTITUCIONAL):</h2>
+                <input class="formulario--input__5" type="text" placeholder="EMAIL">
+                <h2 class="formulario--label__6">CARGO:</h2>
+                <select class="formulario--input__6" required>
+                    <option disabled-selected>SELECCIONE SU CARGO</option>
+                </select>
+            </div>
+
+            <!--ESPACIO DEPARTAMENTO SUB-DEP UNIDAD-->
+            <div class="form_3">
+                <h2 class="formulario--label__7">DEPARTAMENTO SOLICITANTE:</h2>
+                <select class="formulario--input__7" required>
+                    <option disabled-selected>SELECCIONE UN DEPARTAMENTO</option>
+                </select>
+
+                <h2 class="formulario--label__8">SUB-DEPARTAMENTO SOLICITANTE:</h2>
+                <select class="formulario--input__8" required>
+                    <option disabled-selected>SELECCIONE UN DEPARTAMENTO</option>
+                </select>
+
+                <h2 class="formulario--label__9">UNIDAD SOLICITANTE:</h2>
+                <select class="formulario--input__9" required>
+                    <option disabled-selected>SELECCIONE UN DEPARTAMENTO</option>
+                </select>
+            </div>
+
+            <!--ESPACIO ULTIMA PARTE DE TEXTO Y BOTÓN-->
+            <div class="form_4">
+                <input class="formulario--input__10" type="text">
+
+                <div id="botonID" class="botonSubmit">
+                    <input class="boton" type="submit" value="Enviar">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
